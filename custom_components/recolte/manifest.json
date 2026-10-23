@@ -1,0 +1,13 @@
+{
+  "domain": "recolte",
+  "name": "Récolte",
+  "codeowners": ["@olivierouellet"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/olivierouellet/Recolte-Crop",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/olivierouellet/Recolte-Crop/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

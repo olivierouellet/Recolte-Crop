@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Récolte: an ear of corn, its husk partly open on the kernels, in front of fields under a rising sun. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f8fd2"/>
+      <stop offset="1" stop-color="#9fd0f0"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7cb342"/>
+      <stop offset="1" stop-color="#33691e"/>
+    </linearGradient>
+    <linearGradient id="husk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9ccc65"/>
+      <stop offset="1" stop-color="#c5e1a5"/>
+    </linearGradient>
+    <linearGradient id="husk2" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#8bc34a"/>
+      <stop offset="1" stop-color="#c5e1a5"/>
+    </linearGradient>
+    <clipPath id="tile"><rect width="256" height="256" rx="56"/></clipPath>
+    <clipPath id="cob"><path d="M108 96 C108 70 118 52 128 32 C138 52 148 70 148 96 L146 178 Q128 194 110 178 Z"/></clipPath>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="256" height="256" fill="url(#sky)"/>
+    <!-- sun, half risen behind the horizon -->
+    <circle cx="196" cy="128" r="34" fill="#ffd54f"/>
+    <circle cx="196" cy="128" r="48" fill="#ffd54f" fill-opacity="0.25"/>
+    <!-- fields: a hill and furrows converging on the horizon -->
+    <path d="M0 140 Q128 112 256 140 L256 256 L0 256 Z" fill="url(#field)"/>
+    <g stroke="#2e5d18" stroke-opacity="0.45" stroke-width="5" fill="none" stroke-linecap="round">
+      <path d="M128 128 L40 256"/>
+      <path d="M128 128 L216 256"/>
+      <path d="M128 128 L-20 230"/>
+      <path d="M128 128 L276 230"/>
+    </g>
+    <!-- the ear, leaning a little -->
+    <g transform="translate(-16 0) rotate(-14 128 150)">
+      <!-- silk -->
+      <g stroke="#a1662f" stroke-width="2.5" fill="none" stroke-linecap="round">
+        <path d="M128 34 Q122 30 112 22"/>
+        <path d="M128 34 Q128 28 126 16"/>
+        <path d="M128 34 Q136 30 146 24"/>
+      </g>
+      <!-- outer husk, folded back behind the ear -->
+      <path d="M124 232 C 88 214, 60 172, 50 116 C 78 146, 100 170, 120 190 Z" fill="#7cb342" stroke="#33691e" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M132 232 C 168 214, 196 170, 206 116 C 178 146, 156 170, 136 190 Z" fill="#6a9f37" stroke="#33691e" stroke-width="2.5" stroke-linejoin="round"/>
+      <!-- cob and kernels -->
+      <path d="M108 96 C108 70 118 52 128 32 C138 52 148 70 148 96 L146 178 Q128 194 110 178 Z" fill="#f2b705"/>
+      <g clip-path="url(#cob)" fill="#ffd54f" stroke="#d99a00" stroke-width="1.6">
+          <ellipse cx="93.5" cy="40.0" rx="5.1" ry="6"/>
+          <ellipse cx="105.0" cy="40.0" rx="5.1" ry="6"/>
+          <ellipse cx="116.5" cy="40.0" rx="5.1" ry="6"/>
+          <ellipse cx="128.0" cy="40.0" rx="5.1" ry="6"/>
+          <ellipse cx="139.5" cy="40.0" rx="5.1" ry="6"/>
+          <ellipse cx="151.0" cy="40.0" rx="5.1" ry="6"/>
+          <ellipse cx="99.2" cy="50.8" rx="5.1" ry="6"/>
+          <ellipse cx="110.8" cy="50.8" rx="5.1" ry="6"/>
+          <ellipse cx="122.2" cy="50.8" rx="5.1" ry="6"/>
+          <ellipse cx="133.8" cy="50.8" rx="5.1" ry="6"/>
+          <ellipse cx="145.2" cy="50.8" rx="5.1" ry="6"/>
+          <ellipse cx="156.8" cy="50.8" rx="5.1" ry="6"/>
+          <ellipse cx="93.5" cy="61.5" rx="5.1" ry="6"/>
+          <ellipse cx="105.0" cy="61.5" rx="5.1" ry="6"/>
+          <ellipse cx="116.5" cy="61.5" rx="5.1" ry="6"/>
+          <ellipse cx="128.0" cy="61.5" rx="5.1" ry="6"/>
+          <ellipse cx="139.5" cy="61.5" rx="5.1" ry="6"/>
+          <ellipse cx="151.0" cy="61.5" rx="5.1" ry="6"/>
+          <ellipse cx="99.2" cy="72.2" rx="5.1" ry="6"/>
+          <ellipse cx="110.8" cy="72.2" rx="5.1" ry="6"/>
+          <ellipse cx="122.2" cy="72.2" rx="5.1" ry="6"/>
+          <ellipse cx="133.8" cy="72.2" rx="5.1" ry="6"/>
+          <ellipse cx="145.2" cy="72.2" rx="5.1" ry="6"/>
+          <ellipse cx="156.8" cy="72.2" rx="5.1" ry="6"/>
+          <ellipse cx="93.5" cy="83.0" rx="5.1" ry="6"/>
+          <ellipse cx="105.0" cy="83.0" rx="5.1" ry="6"/>
+          <ellipse cx="116.5" cy="83.0" rx="5.1" ry="6"/>
+          <ellipse cx="128.0" cy="83.0" rx="5.1" ry="6"/>
+          <ellipse cx="139.5" cy="83.0" rx="5.1" ry="6"/>
+          <ellipse cx="151.0" cy="83.0" rx="5.1" ry="6"/>
+          <ellipse cx="99.2" cy="93.8" rx="5.1" ry="6"/>
+          <ellipse cx="110.8" cy="93.8" rx="5.1" ry="6"/>
+          <ellipse cx="122.2" cy="93.8" rx="5.1" ry="6"/>
+          <ellipse cx="133.8" cy="93.8" rx="5.1" ry="6"/>
+          <ellipse cx="145.2" cy="93.8" rx="5.1" ry="6"/>
+          <ellipse cx="156.8" cy="93.8" rx="5.1" ry="6"/>
+          <ellipse cx="93.5" cy="104.5" rx="5.1" ry="6"/>
+          <ellipse cx="105.0" cy="104.5" rx="5.1" ry="6"/>
+          <ellipse cx="116.5" cy="104.5" rx="5.1" ry="6"/>
+          <ellipse cx="128.0" cy="104.5" rx="5.1" ry="6"/>
+          <ellipse cx="139.5" cy="104.5" rx="5.1" ry="6"/>
+          <ellipse cx="151.0" cy="104.5" rx="5.1" ry="6"/>
+          <ellipse cx="99.2" cy="115.2" rx="5.1" ry="6"/>
+          <ellipse cx="110.8" cy="115.2" rx="5.1" ry="6"/>
+          <ellipse cx="122.2" cy="115.2" rx="5.1" ry="6"/>
+          <ellipse cx="133.8" cy="115.2" rx="5.1" ry="6"/>
+          <ellipse cx="145.2" cy="115.2" rx="5.1" ry="6"/>
+          <ellipse cx="156.8" cy="115.2" rx="5.1" ry="6"/>
+          <ellipse cx="93.5" cy="126.0" rx="5.1" ry="6"/>
+          <ellipse cx="105.0" cy="126.0" rx="5.1" ry="6"/>
+          <ellipse cx="116.5" cy="126.0" rx="5.1" ry="6"/>
+          <ellipse cx="128.0" cy="126.0" rx="5.1" ry="6"/>
+          <ellipse cx="139.5" cy="126.0" rx="5.1" ry="6"/>
+          <ellipse cx="151.0" cy="126.0" rx="5.1" ry="6"/>
+          <ellipse cx="99.2" cy="136.8" rx="5.1" ry="6"/>
+          <ellipse cx="110.8" cy="136.8" rx="5.1" ry="6"/>
+          <ellipse cx="122.2" cy="136.8" rx="5.1" ry="6"/>
+          <ellipse cx="133.8" cy="136.8" rx="5.1" ry="6"/>
+          <ellipse cx="145.2" cy="136.8" rx="5.1" ry="6"/>
+          <ellipse cx="156.8" cy="136.8" rx="5.1" ry="6"/>
+          <ellipse cx="93.5" cy="147.5" rx="5.1" ry="6"/>
+          <ellipse cx="105.0" cy="147.5" rx="5.1" ry="6"/>
+          <ellipse cx="116.5" cy="147.5" rx="5.1" ry="6"/>
+          <ellipse cx="128.0" cy="147.5" rx="5.1" ry="6"/>
+          <ellipse cx="139.5" cy="147.5" rx="5.1" ry="6"/>
+          <ellipse cx="151.0" cy="147.5" rx="5.1" ry="6"/>
+          <ellipse cx="99.2" cy="158.2" rx="5.1" ry="6"/>
+          <ellipse cx="110.8" cy="158.2" rx="5.1" ry="6"/>
+          <ellipse cx="122.2" cy="158.2" rx="5.1" ry="6"/>
+          <ellipse cx="133.8" cy="158.2" rx="5.1" ry="6"/>
+          <ellipse cx="145.2" cy="158.2" rx="5.1" ry="6"/>
+          <ellipse cx="156.8" cy="158.2" rx="5.1" ry="6"/>
+          <ellipse cx="93.5" cy="169.0" rx="5.1" ry="6"/>
+          <ellipse cx="105.0" cy="169.0" rx="5.1" ry="6"/>
+          <ellipse cx="116.5" cy="169.0" rx="5.1" ry="6"/>
+          <ellipse cx="128.0" cy="169.0" rx="5.1" ry="6"/>
+          <ellipse cx="139.5" cy="169.0" rx="5.1" ry="6"/>
+          <ellipse cx="151.0" cy="169.0" rx="5.1" ry="6"/>
+          <ellipse cx="99.2" cy="179.8" rx="5.1" ry="6"/>
+          <ellipse cx="110.8" cy="179.8" rx="5.1" ry="6"/>
+          <ellipse cx="122.2" cy="179.8" rx="5.1" ry="6"/>
+          <ellipse cx="133.8" cy="179.8" rx="5.1" ry="6"/>
+          <ellipse cx="145.2" cy="179.8" rx="5.1" ry="6"/>
+          <ellipse cx="156.8" cy="179.8" rx="5.1" ry="6"/>
+      </g>
+      <!-- husk leaves: wrapped around the base of the cob, peeled open toward the tip -->
+      <path d="M128 236 C 104 222, 96 192, 98 152 C 99 128, 92 108, 78 92 C 104 100, 118 122, 122 150 C 125 180, 126 208, 128 236 Z" fill="url(#husk)" stroke="#33691e" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M128 236 C 152 222, 160 192, 158 152 C 157 128, 164 108, 180 90 C 152 100, 138 122, 134 150 C 131 180, 130 208, 128 236 Z" fill="url(#husk2)" stroke="#33691e" stroke-width="2.5" stroke-linejoin="round"/>
+      <g stroke="#33691e" stroke-opacity="0.45" stroke-width="1.5" fill="none" stroke-linecap="round">
+        <path d="M120 222 C 108 200, 104 176, 104 152 C 104 132, 98 116, 88 102"/>
+        <path d="M136 222 C 148 200, 152 176, 152 152 C 152 132, 158 114, 170 100"/>
+      </g>
+      <!-- front leaf, over the seam where the husks meet -->
+      <path d="M128 238 C 116 216, 112 192, 116 164 C 120 148, 125 134, 128 120 C 131 134, 136 148, 140 164 C 144 192, 140 216, 128 238 Z" fill="url(#husk)" stroke="#33691e" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M128 228 C 126 200, 126 160, 128 132" stroke="#33691e" stroke-opacity="0.45" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <!-- stem -->
+      <path d="M122 232 L134 232 L132 250 L124 250 Z" fill="#6b8e23" stroke="#33691e" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

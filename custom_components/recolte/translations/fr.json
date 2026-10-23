@@ -1,0 +1,807 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Agroclimat à un endroit",
+        "description": "Choisissez un endroit au Canada (votre domicile dans Home Assistant est proposé; déplacez le repère pour une autre terre) et les produits à suivre. Les données sont celles d’Agriculture et Agroalimentaire Canada, sur une grille qui couvre les régions agricoles. Ajoutez l’intégration de nouveau pour un autre endroit.",
+        "data": {
+          "name": "Nom",
+          "location": "Endroit",
+          "products": "Produits"
+        },
+        "data_description": {
+          "name": "Le nom de l’appareil et le début du nom des capteurs.",
+          "products": "Un capteur par produit. Vous pourrez les changer avec Configurer."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossible de joindre le service d’Agriculture et Agroalimentaire Canada. Réessayez plus tard.",
+      "outside_coverage": "Aucune donnée à cet endroit : la grille couvre les régions agricoles du Canada. Choisissez un endroit plus au sud ou sur la terre ferme.",
+      "no_product": "Choisissez au moins un produit."
+    },
+    "abort": {
+      "already_configured": "Cet endroit est déjà configuré."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Produits suivis",
+        "description": "Ajouter un produit crée son capteur; en retirer un supprime le sien.",
+        "data": {
+          "products": "Produits"
+        }
+      }
+    },
+    "error": {
+      "no_product": "Choisissez au moins un produit."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ch_gs": {
+        "name": "Unités thermiques de croissance (maïs)",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "gd_0": {
+        "name": "Degrés-jours base 0",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "gd_5": {
+        "name": "Degrés-jours base 5",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "gd_10": {
+        "name": "Degrés-jours base 10",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "gd_15": {
+        "name": "Degrés-jours base 15",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ac_01": {
+        "name": "Précipitations, 24 heures",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ac_07": {
+        "name": "Précipitations, 7 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ac_14": {
+        "name": "Précipitations, 14 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ac_30": {
+        "name": "Précipitations, 30 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ac_60": {
+        "name": "Précipitations, 60 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ac_90": {
+        "name": "Précipitations, 90 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ac_gs": {
+        "name": "Précipitations, saison de croissance",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ac_ay": {
+        "name": "Précipitations, année agricole",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ac_wi": {
+        "name": "Précipitations, hiver",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "av_30": {
+        "name": "Précipitations en % de la moyenne, 30 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "av_60": {
+        "name": "Précipitations en % de la moyenne, 60 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "av_90": {
+        "name": "Précipitations en % de la moyenne, 90 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "av_gs": {
+        "name": "Précipitations en % de la moyenne, saison de croissance",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "av_ay": {
+        "name": "Précipitations en % de la moyenne, année agricole",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "pe_30": {
+        "name": "Centile des précipitations, 30 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "pe_60": {
+        "name": "Centile des précipitations, 60 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "pe_90": {
+        "name": "Centile des précipitations, 90 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "pe_gs": {
+        "name": "Centile des précipitations, saison de croissance",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "pe_ay": {
+        "name": "Centile des précipitations, année agricole",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "dnp_30": {
+        "name": "Écart des précipitations, 30 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "dnp_60": {
+        "name": "Écart des précipitations, 60 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "dnp_90": {
+        "name": "Écart des précipitations, 90 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "dnp_gs": {
+        "name": "Écart des précipitations, saison de croissance",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "dnp_ay": {
+        "name": "Écart des précipitations, année agricole",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ds_cc": {
+        "name": "Jours secs consécutifs",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ds_gs": {
+        "name": "Jours secs, saison de croissance",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ds_30": {
+        "name": "Jours secs, 30 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ds_60": {
+        "name": "Jours secs, 60 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ds_90": {
+        "name": "Jours secs, 90 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "hw25_cc": {
+        "name": "Jours consécutifs au-dessus de 25 °C",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "hw25_gs": {
+        "name": "Jours au-dessus de 25 °C, saison de croissance",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "hw30_cc": {
+        "name": "Jours consécutifs au-dessus de 30 °C",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "hw30_gs": {
+        "name": "Jours au-dessus de 30 °C, saison de croissance",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "hw32_cc": {
+        "name": "Jours consécutifs au-dessus de 32 °C",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "hw32_gs": {
+        "name": "Jours au-dessus de 32 °C, saison de croissance",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "tx_01": {
+        "name": "Température maximale, 24 heures",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "tx_07": {
+        "name": "Température maximale, 7 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ti_01": {
+        "name": "Température minimale, 24 heures",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "ti_07": {
+        "name": "Température minimale, 7 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "dntm_28": {
+        "name": "Écart de température, 28 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "dntm_mo": {
+        "name": "Écart de température, mois dernier",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "spi_30": {
+        "name": "SPI, 30 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "spi_90": {
+        "name": "SPI, 90 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "spi_180": {
+        "name": "SPI, 180 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "spi_365": {
+        "name": "SPI, 365 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "spei_30": {
+        "name": "SPEI, 30 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "spei_90": {
+        "name": "SPEI, 90 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "spei_180": {
+        "name": "SPEI, 180 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "spei_365": {
+        "name": "SPEI, 365 jours",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "pdsi_im": {
+        "name": "Indice de sécheresse de Palmer",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "phdi_im": {
+        "name": "Indice hydrologique de Palmer",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "pmdi_im": {
+        "name": "Indice de Palmer modifié",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "mai_im": {
+        "name": "Indice Z de Palmer",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "tsm_im": {
+        "name": "Humidité du sol",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "pnm_im": {
+        "name": "Humidité du sol en % de la normale",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "dnm_im": {
+        "name": "Écart d’humidité du sol",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "bist_im": {
+        "name": "Indice mixte à court terme",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      },
+      "bilt_im": {
+        "name": "Indice mixte à long terme",
+        "state_attributes": {
+          "date": {
+            "name": "Date des données"
+          },
+          "product": {
+            "name": "Produit"
+          }
+        }
+      }
+    }
+  },
+  "selector": {
+    "product": {
+      "options": {
+        "ch_gs": "Unités thermiques de croissance (maïs) (ch_gs)",
+        "gd_0": "Degrés-jours base 0 (gd_0)",
+        "gd_5": "Degrés-jours base 5 (gd_5)",
+        "gd_10": "Degrés-jours base 10 (gd_10)",
+        "gd_15": "Degrés-jours base 15 (gd_15)",
+        "ac_01": "Précipitations, 24 heures (ac_01)",
+        "ac_07": "Précipitations, 7 jours (ac_07)",
+        "ac_14": "Précipitations, 14 jours (ac_14)",
+        "ac_30": "Précipitations, 30 jours (ac_30)",
+        "ac_60": "Précipitations, 60 jours (ac_60)",
+        "ac_90": "Précipitations, 90 jours (ac_90)",
+        "ac_gs": "Précipitations, saison de croissance (ac_gs)",
+        "ac_ay": "Précipitations, année agricole (ac_ay)",
+        "ac_wi": "Précipitations, hiver (ac_wi)",
+        "av_30": "Précipitations en % de la moyenne, 30 jours (av_30)",
+        "av_60": "Précipitations en % de la moyenne, 60 jours (av_60)",
+        "av_90": "Précipitations en % de la moyenne, 90 jours (av_90)",
+        "av_gs": "Précipitations en % de la moyenne, saison de croissance (av_gs)",
+        "av_ay": "Précipitations en % de la moyenne, année agricole (av_ay)",
+        "pe_30": "Centile des précipitations, 30 jours (pe_30)",
+        "pe_60": "Centile des précipitations, 60 jours (pe_60)",
+        "pe_90": "Centile des précipitations, 90 jours (pe_90)",
+        "pe_gs": "Centile des précipitations, saison de croissance (pe_gs)",
+        "pe_ay": "Centile des précipitations, année agricole (pe_ay)",
+        "dnp_30": "Écart des précipitations, 30 jours (dnp_30)",
+        "dnp_60": "Écart des précipitations, 60 jours (dnp_60)",
+        "dnp_90": "Écart des précipitations, 90 jours (dnp_90)",
+        "dnp_gs": "Écart des précipitations, saison de croissance (dnp_gs)",
+        "dnp_ay": "Écart des précipitations, année agricole (dnp_ay)",
+        "ds_cc": "Jours secs consécutifs (ds_cc)",
+        "ds_gs": "Jours secs, saison de croissance (ds_gs)",
+        "ds_30": "Jours secs, 30 jours (ds_30)",
+        "ds_60": "Jours secs, 60 jours (ds_60)",
+        "ds_90": "Jours secs, 90 jours (ds_90)",
+        "hw25_cc": "Jours consécutifs au-dessus de 25 °C (hw25_cc)",
+        "hw25_gs": "Jours au-dessus de 25 °C, saison de croissance (hw25_gs)",
+        "hw30_cc": "Jours consécutifs au-dessus de 30 °C (hw30_cc)",
+        "hw30_gs": "Jours au-dessus de 30 °C, saison de croissance (hw30_gs)",
+        "hw32_cc": "Jours consécutifs au-dessus de 32 °C (hw32_cc)",
+        "hw32_gs": "Jours au-dessus de 32 °C, saison de croissance (hw32_gs)",
+        "tx_01": "Température maximale, 24 heures (tx_01)",
+        "tx_07": "Température maximale, 7 jours (tx_07)",
+        "ti_01": "Température minimale, 24 heures (ti_01)",
+        "ti_07": "Température minimale, 7 jours (ti_07)",
+        "dntm_28": "Écart de température, 28 jours (dntm_28)",
+        "dntm_mo": "Écart de température, mois dernier (dntm_mo)",
+        "spi_30": "SPI, 30 jours (spi_30)",
+        "spi_90": "SPI, 90 jours (spi_90)",
+        "spi_180": "SPI, 180 jours (spi_180)",
+        "spi_365": "SPI, 365 jours (spi_365)",
+        "spei_30": "SPEI, 30 jours (spei_30)",
+        "spei_90": "SPEI, 90 jours (spei_90)",
+        "spei_180": "SPEI, 180 jours (spei_180)",
+        "spei_365": "SPEI, 365 jours (spei_365)",
+        "pdsi_im": "Indice de sécheresse de Palmer (pdsi_im)",
+        "phdi_im": "Indice hydrologique de Palmer (phdi_im)",
+        "pmdi_im": "Indice de Palmer modifié (pmdi_im)",
+        "mai_im": "Indice Z de Palmer (mai_im)",
+        "tsm_im": "Humidité du sol (tsm_im)",
+        "pnm_im": "Humidité du sol en % de la normale (pnm_im)",
+        "dnm_im": "Écart d’humidité du sol (dnm_im)",
+        "bist_im": "Indice mixte à court terme (bist_im)",
+        "bilt_im": "Indice mixte à long terme (bilt_im)"
+      }
+    }
+  }
+}
